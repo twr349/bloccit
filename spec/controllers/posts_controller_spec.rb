@@ -13,7 +13,8 @@ let(:my_post) { Post.create!(title: RandomData.random_sentence, body: RandomData
   
    it "assigns [my_post] to @posts" do
        get :index
-      expect(assigns(:posts)) == ([my_post])#.to eq did not work?
+      expect(assigns(:posts)).to eq([my_post])
+      #expect(assigns(:posts)) == ([my_post])#.to eq did not work?
      end
   end
   
