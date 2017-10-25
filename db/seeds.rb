@@ -31,4 +31,14 @@ puts "#{Comment.count} comments created"
 end
 advertisements = Advertisement.all
 
-puts "#{Advertisement.count} advertisments created"    
+puts "#{Advertisement.count} advertisments created" 
+
+50.times do
+    Question.create!(
+        title: RandomData.random_sentence,
+        body: RandomData.random_paragraph,
+        resolved: false
+        )
+end
+
+puts "#{Question.count} questions created"
