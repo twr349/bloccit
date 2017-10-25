@@ -36,20 +36,20 @@ let(:my_advertisement) { Advertisement.create!(title: RandomData.random_sentence
       end
     end
  
-    describe "ADVERTISEMENT create" do
+    describe "POST create" do
       it "increases the number of ADVERTISEMENT by 1" do
-        expect{ advertisement :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: RandomData.random_interger } } }.to change(Advertisement,:count).by(1)
+        expect{ post :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: RandomData.random_interger } } }.to change(Advertisement,:count).by(1)
       end
  
  
       it "assigns the new advertisement to @advertisement" do
-        advertisement :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: RandomData.random_interger } }
+        post :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: RandomData.random_interger } }
         expect(assigns(:advertisement)).to eq Advertisement.last
       end
  
  
       it "redirects to the new advertisement" do
-        advertisement :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: RandomData.random_interger } }
+        post :create, params: { advertisement: { title: RandomData.random_sentence, copy: RandomData.random_paragraph, price: RandomData.random_interger } }
         expect(response).to redirect_to Advertisement.last
       end
     end
