@@ -41,7 +41,19 @@ puts "#{Comment.count} comments created"
 end
 advertisements = Advertisement.all
 
-puts "#{Advertisement.count} advertisments created" 
+puts "#{Advertisement.count} advertisments created"
+
+25.times do 
+    SponsoredPost.create!(
+        topic:  topics.sample,
+        title: RandomData.random_sentence,
+        body: RandomData.random_paragraph,
+        price: RandomData.random_interger
+        )
+end
+sponsored_posts = SponsoredPost.all
+
+puts "#{SponsoredPost.count} sponsored posts created"
 
 50.times do
     Question.create!(
