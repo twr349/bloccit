@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   resources :advertisements
 
-
+  post 'users/confirm' => 'users#confirm'
+  
   get 'about' => 'welcome#about'
   
   get 'contact' => 'welcome#contact'
