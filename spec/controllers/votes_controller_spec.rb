@@ -102,6 +102,6 @@ include SessionsHelper
          expect(response).to redirect_to(my_topic)
        end
      end
-   end
+    end
 
 end#end of ends
