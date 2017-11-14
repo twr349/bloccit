@@ -1,7 +1,9 @@
-FactoryGirl.define do
-   factory :vote do
-     value 1
-     topic
-     user
+ FactoryGirl.define do
+  factory :vote do
+      value 1
+      post 
+      user
+      after(:build) { update_rank }
     end
 end
+
