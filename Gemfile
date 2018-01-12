@@ -6,7 +6,7 @@ source 'https://rubygems.org'
  end
  
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
- gem 'rails', '~> 5.1.2'
+ gem 'rails'
  
  # #1
  group :production do
@@ -56,3 +56,5 @@ source 'https://rubygems.org'
  gem 'bcrypt'
  
  gem 'figaro', '1.0'
+ 
+ gem 'google-webfonts-rails'
