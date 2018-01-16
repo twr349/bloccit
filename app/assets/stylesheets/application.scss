@@ -13,5 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1 {
+    font-family: 'Zilla Slab Highlight', cursive;
+}
