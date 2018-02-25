@@ -1,9 +1,14 @@
-<h4>Add a comment</h4>
+<div class="circle-sml">
+  <div class="circle-form">
+    <h3 class="rant">Add a Comment</h3>
+    <%= form_for [post, comment] do |f| %>
+      <div class="form-group">
+        <%= f.label :body, class: 'sr-only' %>
+        <%= f.text_field :body, class: 'form-control', placeholder: "Enter a new comment" %>
+      </div>
+      <%= f.submit "Submit", class: 'btn btn-default' %>
+    <% end %>
+  </div>
+</div>
+
  
- <%= form_for [post, comment] do |f| %>
-   <div class="form-group">
-     <%= f.label :body, class: 'sr-only' %>
-     <%= f.text_field :body, class: 'form-control', placeholder: "Enter a new comment" %>
-   </div>
-   <%= f.submit "Submit Comment", class: 'btn btn-default pull-right' %>
- <% end %>

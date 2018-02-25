@@ -11,8 +11,8 @@ require 'random_data'
 
 15.times do
    Topic.create!(
-     name:         RandomData.random_sentence,
-     description:  RandomData.random_paragraph
+     name:         RandomData.random_word,
+     description:  RandomData.random_sentence
    )
  end
  topics = Topic.all
@@ -21,8 +21,8 @@ require 'random_data'
     post = Post.create!(
         user:   users.sample,
         topic:  topics.sample,
-        title: RandomData.random_sentence,
-        body: RandomData.random_paragraph
+        title: RandomData.random_word,
+        body: RandomData.random_sentence
     )
  post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
  rand(1..5).times { post.votes.create!(value: [-1, 1].sample, user: users.sample) }
@@ -34,7 +34,7 @@ posts = Post.all
     Comment.create!(
         user: users.sample,
         post: posts.sample,
-        body: RandomData.random_paragraph
+        body: RandomData.random_sentence
     )
 end
 
@@ -55,6 +55,13 @@ end
    password: 'helloworld'
  )
  
+ me = User.create!(
+    name: 'Tyler Roberts',
+    email: 'twr349@gmail.com',
+    password: 'password',
+    role: 'admin'
+)
+ 
  
 
 
@@ -65,35 +72,3 @@ puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Vote.count} votes created"
 
-50.times do 
-    Advertisement.create!(
-        title: RandomData.random_sentence,
-        copy: RandomData.random_paragraph,
-        price: RandomData.random_interger
-        )
-end
-advertisements = Advertisement.all
-
-puts "#{Advertisement.count} advertisments created"
-
-25.times do 
-    SponsoredPost.create!(
-        topic:  topics.sample,
-        title: RandomData.random_sentence,
-        body: RandomData.random_paragraph,
-        price: RandomData.random_interger
-        )
-end
-sponsored_posts = SponsoredPost.all
-
-puts "#{SponsoredPost.count} sponsored posts created"
-
-50.times do
-    Question.create!(
-        title: RandomData.random_sentence,
-        body: RandomData.random_paragraph,
-        resolved: false
-        )
-end
-
-puts "#{Question.count} questions created"

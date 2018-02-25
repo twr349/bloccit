@@ -1,13 +1,12 @@
-<%= content_tag :div, class: 'media', id: "comment-#{comment.id}" do %>
-  <div class="media">
-   <div class="media-body">
-     <small>
-       <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
-       <% if user_is_authorized_for_comment?(comment) %>
-         | <%= link_to "Delete", [comment.post, comment], method: :delete %>
-       <% end %>
-     </small>
-     <p><%= comment.body %></p>
+<%= content_tag :div, class: 'col-md-4', id: "comment-#{comment.id}" do %>
+  <div class="circle-sml">
+    <div class="circle-form">
+      <h3 class="rant"><%= comment.user.name %></h3>
+      <h4><%= comment.body %></h4> 
+      commented <%= time_ago_in_words(comment.created_at) %> ago
+      <% if user_is_authorized_for_comment?(comment) %>
+        | <%= link_to "Delete", [comment.post, comment], method: :delete %>
+      <% end %>
    </div>
-  </div>
+ </div>
 <% end %>

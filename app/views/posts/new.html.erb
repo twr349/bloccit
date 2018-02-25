@@ -1,18 +1,19 @@
-<div class='container'>
-<h1>New Post</h1>
- 
- <div class="row">
-   <div class="col-md-4">
-     <p>Guidelines for posts</p>
-     <ul>
-       <li>Make sure it rhymes.</li>
-       <li>Don't use the letter "A".</li>
-       <li>The incessant use of hashtags will get you banned.</li>
-     </ul>
-   </div>
-   <div class="col-md-8">
-     <%= render partial: 'form', locals: { topic: @topic, post: @post } %>
-       
-   </div>
- </div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="circle-sml">
+      <div class="circle-form">
+        <h3 class="rant">New Thought</h3>
+        <p>Guidelines for thoughts</p>
+        <ol>
+          <li>Please no cats.</li>
+          <li>No grinding teeth.</li>
+          <li>No GIFs.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= render partial: 'form', locals: { topic: @topic, post: @post } %> 
+  </div>
 </div>
+

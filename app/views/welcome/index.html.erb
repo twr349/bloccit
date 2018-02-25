@@ -1,25 +1,38 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>Rant</h1>
-     <p>Rant is a resource for sharing rants with your friends!</p>
-     <p>
-     <%= link_to "Sign In", new_session_path, class: 'btn btn-primary' %> or
-     <%= link_to "Sign Up", new_user_path, class: 'btn btn-success' %> today!
-     </p>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <div class="circle">
+      <div class="circle-txt">
+        <h1 class="rant">RANT</h1>
+        <h4>Rant is a resource for sharing rants with your friends!</h4>
+        <%= link_to "Sign In", new_session_path, class: 'btn btn-default' %>
+        <%= link_to "Sign Up", new_user_path, class: 'btn btn-danger' %>
+      </div>      
+    </div> 
   </div>
- 
- <div class="row">
-   <div class="col-md-4">
-     <h2>Solves world hunger</h2>
-     <p>Bloccit will deliver food and water to those in need, all over the world.</p>
-   </div>
-   <div class="col-md-4">
-     <h2>Eliminates poverty</h2>
-     <p>Bloccit will deliver money and education to those in need, all over the world.</p>
-   </div>
-   <div class="col-md-4">
-     <h2>Makes you better looking</h2>
-     <p>Bloccit will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
-   </div>
- </div>
+</div>
+<div class="row text-center">
+  <div class="col-md-4">
+    <div class="circle-sml">
+      <div class="circle-sml-txt">
+        <h3 class="rant">HOT DOGS VS BUNS</h3>
+        <h5>Why, do hot dogs come 10 to a package while the buns come in packages of 8?</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="circle-sml">
+      <div class="circle-sml-txt">
+        <h3 class="rant">KITTENS!</h3>
+        <h5>Why, do they have claws?!</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="circle-sml">
+      <div class="circle-sml-txt">
+        <h3 class="rant">MARGARITAS</h3>
+        <h5>Don't serve me one if its not in the right glass!!</h5>
+      </div>
+    </div>
+  </div>
 </div>
